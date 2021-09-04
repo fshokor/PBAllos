@@ -9,6 +9,8 @@ Requirements
 
 packages and version 
 
+# Enviroment 
+
 
 Installation
 ------------
@@ -53,6 +55,8 @@ Pandini, A., Fornili, A., Fraternali, F., & Kleinjung, J. (2012). Detection of a
 PBxplore: 
 
 Barnoud, J., Santuz, H., Craveur, P., Joseph, A. P., Jallu, V., de Brevern, A. G., & Poulain, P. (2017). PBxplore: a tool to analyze local protein structure and deformability with Protein Blocks. PeerJ, 5, e4013. https://doi.org/10.7717/peerj.4013
+
+https://pypi.org/project/pbxplore/ 
 
 Calf-1:
 
