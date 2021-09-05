@@ -29,22 +29,30 @@ link to the data : https://www.dsimb.inserm.fr/~debrevern/Calf-1Projekt/
 
 in the treminal:
 
+~~~
 mkdir out 
+~~~
 
 install the data:
 
+~~~
 wget "https://www.dsimb.inserm.fr/~debrevern/Calf-1Projekt/WT.tar.gz" -nc -O out/WT.tar.gz
+~~~
 
+~~~
 cd out 
+~~~
 
 untar 
-
+~~~
 tar -xf WT.tar.gz
+~~~
 
 exttract the frames file
 
+~~~
 cp -R data/goguet/DM_Calf-1_WT/production_global/Frames WT_Frames 
-
+~~~
 
 
 Brief overview 
