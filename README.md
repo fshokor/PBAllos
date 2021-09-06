@@ -59,6 +59,16 @@ Brief overview
 
 input : files format 
 
+assign pb 
+~~~
+PBassign -p WT_Frames/ -o test1
+~~~
+
+
+~~~
+at test1.PB.fasta | sed "s/^>.*/\t/" | tr -d "\n" | tr "\t" "\n" > test1.PB.flat
+~~~
+
 # Results 
 
 output and wish script or command 
