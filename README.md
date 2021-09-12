@@ -18,9 +18,17 @@ and the installation off the requirements or a link to their documentation
 commmand for the installation of the principal packages pbxplore 
 
 
-## Packages
+### Packages
 
 + version
+
+## Usage
+To compute the MI be     :
+* Process the dataset  using:
+*   * sss.sh 
+*   *
+* Run the `main.py` to compute the MI .... by choosing yoiuur paramet :
+*   python main.py --input_path ~/Desktop/coursprog/first/out/ --output_dir out/ --start_idx 10 --end_idx 100
 
 
 # Data 
