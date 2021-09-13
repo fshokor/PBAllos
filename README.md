@@ -13,6 +13,10 @@ This Python program is a re-implementation of GSATools, by using a different str
 - [MDAnalysis](https://code.google.com/p/mdanalysis/) >= 2.0
 - [PBXplore](https://pbxplore.readthedocs.io/en/latest/)= 1.4
 
+to create logo from PB sequences (optionel):
+
+- [WebLogo 3](http://weblogo.threeplusone.com/)
+
 
 ## Installation
 
@@ -44,6 +48,7 @@ This program takes as input a [PDB](http://www.wwpdb.org/documentation/file-form
 
 It will return:
 - Protein encoded sequences alignment: .PB.flat and PB.fasta files  
+- Frequency table: .PB.count
 - PB sequences list and table: .npy and .csv files
 - Number sequences list and table: .npy and .csv files 
 - Mutual information matrix: .csv and .npy files 
@@ -52,22 +57,15 @@ It will return:
 To compute the MI between protein encoded sequences:
 
 * Process the dataset using:
-*   * data.sh 
-*   * encoding.sh
+   * data.sh: install data from source and organize it 
+   * encoding.sh: PB assignement 
+* stat.sh: statistical analysis on PBs (frequency, Neq) (optionnel) 
 * Run the `main.py` to compute the mutual information by choosing your paramet, e.g:
-*   python main.py --input_path ~out/ --output_dir out/ --start_idx 10 --end_idx 100
+
+    python main.py --input_path ~out/ --output_dir out/ 
 
 
 # Data 
-
-
-# Results 
-
-output and wish script or command 
-
-files format 
-
-graphes 
 
 
 # References 
@@ -80,6 +78,7 @@ Pandini, A., Fornili, A., Fraternali, F., & Kleinjung, J. (2012). Detection of a
 *PBxplore: 
 
 Barnoud, J., Santuz, H., Craveur, P., Joseph, A. P., Jallu, V., de Brevern, A. G., & Poulain, P. (2017). PBxplore: a tool to analyze local protein structure and deformability with Protein Blocks. PeerJ, 5, e4013. https://doi.org/10.7717/peerj.4013
+
 
 *Calf-1:
 
