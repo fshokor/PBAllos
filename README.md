@@ -4,7 +4,7 @@ PBAllos is a program to analyze allosteric communication, by computing mutual in
 GSATools, created by [Pandini *et al.*](https://academic.oup.com/bioinformatics/article/29/16/2053/200020), is a free software package to analyze conformational ensembles and to detect functional motions in proteins by means of a structural alphabet. It was implemented in C as a set of analysis programs for GROMACS 4.0.x.
 This Python program is a re-implementation of GSATools, by using a different structural alphabet, and diffrent working environment.
 
-### Requirements
+## Requirements
 
 - [Python](https://www.python.org/)= 3.6
 - [Pandas](https://pandas.pydata.org/) = 1.3.2
@@ -14,8 +14,8 @@ This Python program is a re-implementation of GSATools, by using a different str
 - [PBXplore](https://pbxplore.readthedocs.io/en/latest/)= 1.4
 
 
-Installation
-------------
+## Installation
+
 
 Install [conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html)
 
