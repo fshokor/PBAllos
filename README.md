@@ -1,81 +1,65 @@
-# GSATools
+# PBAllos
 
+PBAllos is a program to analyze allosteric communication, by computing mutual information between encoded protein sequences, using Protein Blocks (PBs) as structural alphabet. Protein Blocks are structures defined by [De Brevern *et al.*](https://www.ncbi.nlm.nih.gov/pubmed/11025540) to analyze the dynamics and deformability of protein structures.   
+GSATools, created by [Pandini *et al.*](https://academic.oup.com/bioinformatics/article/29/16/2053/200020), is a free software package to analyze conformational ensembles and to detect functional motions in proteins by means of a structural alphabet. It was implemented in C as a set of analysis programs for GROMACS 4.0.x.
+This Python program is a re-implementation of GSATools, by using a different structural alphabet, and diffrent working environment.
 
-# Abstract
+### Requirements
 
-
-Requirements
-------------
-
-packages and version 
+- [Python](https://www.python.org/)= 3.6
+- [Pandas](https://pandas.pydata.org/) = 1.3.2
+- [NumPy](https://numpy.org/) >= 1.21
+- [Matplotlib](http://matplotlib.org/) >= 3.4
+- [MDAnalysis](https://code.google.com/p/mdanalysis/) >= 2.0
+- [PBXplore](https://pbxplore.readthedocs.io/en/latest/)= 1.4
 
 
 Installation
 ------------
-git clone ... 
-and the installation off the requirements or a link to their documentation 
 
-commmand for the installation of the principal packages pbxplore 
+Install [conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html)
 
+Clone the repository:
 
-### Packages
+```shell
+$ git clone https://github.com/lilianyc/pb
+$ cd pbAllos
+```
 
-+ version
+Create conda environment:
+
+```shell
+$ conda env create -f environment.yml
+```
+
+Activate conda environment:
+```shell
+$ conda activate PBAllos
+```
+
 
 ## Usage
-To compute the MI be     :
-* Process the dataset  using:
-*   * sss.sh 
-*   *
-* Run the `main.py` to compute the MI .... by choosing yoiuur paramet :
-*   python main.py --input_path ~/Desktop/coursprog/first/out/ --output_dir out/ --start_idx 10 --end_idx 100
+
+This program takes as input a [PDB](http://www.wwpdb.org/documentation/file-format) files.
+
+It will return:
+- Protein encoded sequences alignment: .PB.flat and PB.fasta files  
+- PB sequences list and table: .npy and .csv files
+- Number sequences list and table: .npy and .csv files 
+- Mutual information matrix: .csv and .npy files 
+ 
+
+To compute the MI between protein encoded sequences:
+
+* Process the dataset using:
+*   * data.sh 
+*   * encoding.sh
+* Run the `main.py` to compute the mutual information by choosing your paramet, e.g:
+*   python main.py --input_path ~out/ --output_dir out/ --start_idx 10 --end_idx 100
 
 
 # Data 
 
-link to the data : https://www.dsimb.inserm.fr/~debrevern/Calf-1Projekt/
-
-in the treminal:
-
-~~~
-mkdir out 
-~~~
-
-install the data:
-
-~~~
-wget "https://www.dsimb.inserm.fr/~debrevern/Calf-1Projekt/WT.tar.gz" -nc -O out/WT.tar.gz
-~~~
-
-~~~
-cd out 
-~~~
-
-untar 
-~~~
-tar -xf WT.tar.gz
-~~~
-
-exttract the frames file
-
-~~~
-cp -R data/goguet/DM_Calf-1_WT/production_global/Frames WT_Frames 
-~~~
-
-
-Brief overview 
-
-input : files format 
-
-assign pb 
-~~~
-PBassign -p WT_Frames/ -o test1
-~~~
-
-
-~~~
-at test1.PB.fasta | sed "s/^>.*/\t/" | tr -d "\n" | tr "\t" "\n" > test1.PB.flat
-~~~
 
 # Results 
 
@@ -88,19 +72,16 @@ graphes
 
 # References 
 
-GSATools: 
-
-Pandini, A., Fornili, A., Fraternali, F., & Kleinjung, J. (2013). GSATools: analysis of allosteric communication and functional local motions using a structural alphabet. Bioinformatics (Oxford, England), 29(16), 2053–2055. https://doi.org/10.1093/bioinformatics/btt326
+*GSATools: 
 
 Pandini, A., Fornili, A., Fraternali, F., & Kleinjung, J. (2012). Detection of allosteric signal transmission by information-theoretic analysis of protein dynamics. FASEB journal : official publication of the Federation of American Societies for Experimental Biology, 26(2), 868–881. https://doi.org/10.1096/fj.11-190868
 
 
-
-PBxplore: 
+*PBxplore: 
 
 Barnoud, J., Santuz, H., Craveur, P., Joseph, A. P., Jallu, V., de Brevern, A. G., & Poulain, P. (2017). PBxplore: a tool to analyze local protein structure and deformability with Protein Blocks. PeerJ, 5, e4013. https://doi.org/10.7717/peerj.4013
 
-Calf-1:
+*Calf-1:
 
 Goguet, M., Narwani, T. J., Petermann, R., Jallu, V., & de Brevern, A. G. (2017). In silico analysis of Glanzmann variants of Calf-1 domain of αIIbβ3 integrin revealed dynamic allosteric effect. Scientific reports, 7(1), 8001. https://doi.org/10.1038/s41598-017-08408-w
 
