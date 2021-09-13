@@ -37,6 +37,7 @@ $ conda env create -f environment.yml
 ```
 
 Activate conda environment:
+
 ```shell
 $ conda activate PBAllos
 ```
@@ -54,16 +55,16 @@ It will return:
 - Mutual information matrix: .csv and .npy files 
  
 
-To compute the MI between protein encoded sequences:
+To compute the MI between positions in protein encoded sequences:
 
 * Process the dataset using:
    * data.sh: install data from source and organize it 
    * encoding.sh: PB assignement 
 * stat.sh: statistical analysis on PBs (frequency, Neq) (optionnel) 
-* Run the `main.py` to compute the mutual information by choosing your paramet, e.g:
-
-    python main.py --input_path ~out/ --output_dir out/ 
-
+* Run the `main.py` to compute the mutual information by choosing your parameters, e.g:
+```shell
+$ python main.py --input_path ~out/ --output_dir out/ 
+```
 
 # Data 
 
