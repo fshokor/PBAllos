@@ -65,7 +65,7 @@ To compute the MI between positions in protein encoded sequences:
 To run th program, use `main.sh`:
 
 ```shell
-$ sh main.sh WT <file_name>  <strain_name>  <start_idx>  <end_idx>  <data_size>
+$ sh main.sh <file_name>  <strain_name>  <start_idx>  <end_idx>  <data_size>
 ```
 It will: 
 
