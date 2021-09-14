@@ -33,7 +33,7 @@ $ cd pbAllos
 Create conda environment:
 
 ```shell
-$ conda env create -f environment.yml
+$ conda env create -f environment/environment.yml
 ```
 
 Activate conda environment:
@@ -87,7 +87,7 @@ To study the Wild type file and compute the :
 ```shell
 $ sh main.sh WT 0 850 200
 ```
-You can choose another strain/file by changing the argument WT into the name of the chosen strain. Also you can change the parametres 
+You can choose another strain/file by changing the first argument into the name of the chosen strain. Also you can change the parametres 
 
 In case you want to study all files together:
 ```shell
