@@ -70,6 +70,11 @@ To compute the MI between positions in protein encoded sequences:
 ```shell
 $ python main.py --input_path ~out/ --output_dir out/  --start_idx 0  --end_idx 850 --data_size 200
 ```
+To run th program, use main.sh:
+
+```shell
+$ sh main.sh WT <file_name>  <strain_name>  <start_idx>  <end_idx>  <data_size>
+```
 
 # Example
 
@@ -78,11 +83,11 @@ Each zipped file contains 851 .pdb files, correspond to 850 frames. This domain 
 
 To run the program, type in the terminal:
 
-To study the Wild type file:
+To study the Wild type file and compute the :
 ```shell
-$ sh main.sh WT
+$ sh main.sh WT 0 850 200
 ```
-You can choose another strain/file by changing the argument WT into the name of the chosen strain.
+You can choose another strain/file by changing the argument WT into the name of the chosen strain. Also you can change the parametres 
 
 In case you want to study all files together:
 ```shell
@@ -91,9 +96,9 @@ $ sh test/testall.sh
 
 In the two cases, the program will return the files cited in the previous section (Usage).
 
-Note: By default the program will compute the MI for each 200 frames apart ==> 4 files of MI matrix.
+The program will compute the MI for each 200 frames apart => 5 files of MI matrix in each file format.
 
-You can change the parameters by changing the arguments of main.py in the two bash script (main.sh and testall.sh) (see usage section)
+Note: BY default, the testall, takes every 200 frames apart. You can change the parameters by changing the arguments of main.py in the second bash script (testall.sh) (see usage section)
 
 
 # References 
