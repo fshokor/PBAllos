@@ -56,7 +56,7 @@ It will return:
  
  Run help function:
  ```shell
-$ python main.py --input_path ~out/ --output_dir out/ 
+$ python main.py --help 
 ```
 
 To compute the MI between positions in protein encoded sequences:
