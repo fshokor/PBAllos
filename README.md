@@ -56,6 +56,7 @@ It will return:
  
  Run help function:
  ```shell
+$ sh main.sh -h
 $ python main.py --help 
 ```
 
@@ -98,7 +99,7 @@ In the two cases, the program will return the files cited in the previous sectio
 
 The program will compute the MI for each 200 frames apart => 5 files of MI matrix in each file format.
 
-Note: BY default, the testall, takes every 200 frames apart. You can change the parameters by changing the arguments of main.py in the second bash script (testall.sh) (see usage section)
+Note: BY default, the testall, takes every 200 frames apart. You can change the parameters by changing the arguments of main.py (see usage section)
 
 
 # References 
