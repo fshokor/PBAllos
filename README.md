@@ -2,7 +2,7 @@
 
 PBAllos is a program to analyze allosteric communication, by computing mutual information between encoded protein sequences, using Protein Blocks (PBs) as structural alphabet. Protein Blocks are structures defined by [De Brevern *et al.*](https://www.ncbi.nlm.nih.gov/pubmed/11025540) to analyze the dynamics and deformability of protein structures.   
 GSATools, created by [Pandini *et al.*](https://academic.oup.com/bioinformatics/article/29/16/2053/200020), is a free software package to analyze conformational ensembles and to detect functional motions in proteins by means of a structural alphabet. It was implemented in C as a set of analysis programs for GROMACS 4.0.x.
-This Python program is a re-implementation of GSATools, by using a different structural alphabet, and diffrent working environment.
+This Python program is a re-implementation of GSATools, by using a different structural alphabet, and different working environment.
 
 ## Requirements
 
@@ -13,7 +13,7 @@ This Python program is a re-implementation of GSATools, by using a different str
 - [MDAnalysis](https://code.google.com/p/mdanalysis/) >= 2.0
 - [PBXplore](https://pbxplore.readthedocs.io/en/latest/)= 1.4
 
-to create logo from PB sequences (optionel):
+To create logo from PB sequences (optionel):
 
 - [WebLogo 3](http://weblogo.threeplusone.com/)
 
@@ -26,7 +26,7 @@ Install [conda](https://conda.io/projects/conda/en/latest/user-guide/install/ind
 Clone the repository:
 
 ```shell
-$ git clone https://github.com/lilianyc/pb
+$ git clone https://github.com/fshokor/PBAllos.git
 $ cd pbAllos
 ```
 
@@ -54,19 +54,46 @@ It will return:
 - Number sequences list and table: .npy and .csv files 
 - Mutual information matrix: .csv and .npy files 
  
+ Run help function:
+ ```shell
+$ python main.py --input_path ~out/ --output_dir out/ 
+```
 
 To compute the MI between positions in protein encoded sequences:
 
 * Process the dataset using:
-   * data.sh: install data from source and organize it 
+   * data.sh: install data from source and organize it in out directory
    * encoding.sh: PB assignement 
 * stat.sh: statistical analysis on PBs (frequency, Neq) (optionnel) 
 * Run the `main.py` to compute the mutual information by choosing your parameters, e.g:
+
 ```shell
-$ python main.py --input_path ~out/ --output_dir out/ 
+$ python main.py --input_path ~out/ --output_dir out/  --start_idx 0  --end_idx 850 --data_size 200
 ```
 
-# Data 
+# Example
+
+To test the program, a dataset for [*Calf-1*](https://www.dsimb.inserm.fr/~debrevern/Calf-1Projekt/)(Goguet et *al*.) domain was used.
+Each zipped file contains 851 .pdb files, correspond to 850 frames. This domain has 140 residue (140 position).
+
+To run the program, type in the terminal:
+
+To study the Wild type file:
+```shell
+$ sh main.sh WT
+```
+You can choose another strain/file by changing the argument WT into the name of the chosen strain.
+
+In case you want to study all files together:
+```shell
+$ sh test/testall.sh
+```
+
+In the two cases, the program will return the files cited in the previous section (Usage).
+
+Note: By default the program will compute the MI for each 200 frames apart ==> 4 files of MI matrix.
+
+You can change the parameters by changing the arguments of main.py in the two bash script (main.sh and testall.sh) (see usage section)
 
 
 # References 
