@@ -62,19 +62,21 @@ $ python main.py --help
 
 To compute the MI between positions in protein encoded sequences:
 
-* Process the dataset using:
-   * data.sh: install data from source and organize it in out directory
-   * encoding.sh: PB assignement 
-* stat.sh: statistical analysis on PBs (frequency, Neq) (optionnel) 
-* Run the `main.py` to compute the mutual information by choosing your parameters, e.g:
-
-```shell
-$ python main.py --input_path ~out/ --output_dir out/  --start_idx 0  --end_idx 850 --data_size 200
-```
-To run th program, use main.sh:
+To run th program, use `main.sh`:
 
 ```shell
 $ sh main.sh WT <file_name>  <strain_name>  <start_idx>  <end_idx>  <data_size>
+```
+It will: 
+
+* Process the dataset using:
+   * `data.sh`: install data from source and organize it in out directory
+   * `encoding.sh`: PB assignement 
+* Do statistical analysis on PBs (frequency, Neq): `stat.sh` 
+* Compute the mutual information: `main.py`  by choosing your parameters, e.g:
+
+```shell
+$ python main.py --input_path ~out/ --output_dir out/  --start_idx 0  --end_idx 850 --data_size 200
 ```
 
 # Example
@@ -84,13 +86,13 @@ Each zipped file contains 851 .pdb files, correspond to 850 frames. This domain 
 
 To run the program, type in the terminal:
 
-To study the Wild type file and compute the :
+* To study the Wild type file and compute the :
 ```shell
 $ sh main.sh WT 0 850 200
 ```
-You can choose another strain/file by changing the first argument into the name of the chosen strain. Also you can change the parametres 
+You can choose another strain/file by changing the first argument into the name of the chosen strain. Also you can change the other parametres. 
 
-In case you want to study all files together:
+* In case you want to study all files together:
 ```shell
 $ sh test/testall.sh
 ```
@@ -99,7 +101,7 @@ In the two cases, the program will return the files cited in the previous sectio
 
 The program will compute the MI for each 200 frames apart => 5 files of MI matrix in each file format.
 
-Note: BY default, the testall, takes every 200 frames apart. You can change the parameters by changing the arguments of main.py (see usage section)
+Note: BY default, the `testall.sh`, takes every 200 frames apart. You can change the parameters by changing the arguments of `main.py` (see usage section)
 
 
 # References 
