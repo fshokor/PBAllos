@@ -6,7 +6,7 @@ then
   echo ""
   echo "It use the Protein Blocks (PBs) as a structural alphabet, to encode the sequences  "
   echo ""
-  echo "Usage : sh `basename $0` -a <file_name> <strain_name>  <start_idx>   <end_idx>   <data_size>"
+  echo "Usage : sh `basename $0` <file_name>  <strain_name>   <start_idx>   <end_idx>   <data_size>"
   echo ""
   echo "This Help File: sh `basename $0` -h"
   echo ""
