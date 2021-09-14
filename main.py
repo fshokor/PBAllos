@@ -11,8 +11,8 @@ import argparse, textwrap
 parser = argparse.ArgumentParser(description=textwrap.dedent('''\
                                                 Read a protein sequence alignment file (flat/fasta), 
                                                 convert it into a dataframe : sequences in rows / positions in columns, 
-                                                then convert thr dataframe into array with 16 numbers instead the 16 PB.
-                                                Te final step is computing mutual information between columns/positions
+                                                then convert the dataframe into array with 16 numbers instead the 16 PB.
+                                                The final step is computing mutual information between columns/positions.
                                                 '''))
 
 parser.add_argument('--input_path', type=str, default=None, help='path to input dataset')
