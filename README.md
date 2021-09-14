@@ -27,7 +27,7 @@ Clone the repository:
 
 ```shell
 $ git clone https://github.com/fshokor/PBAllos.git
-$ cd pbAllos
+$ cd PBAllos
 ```
 
 Create conda environment:
