@@ -13,7 +13,7 @@ This Python program is a re-implementation of GSATools, by using a different str
 - [MDAnalysis](https://code.google.com/p/mdanalysis/) >= 2.0
 - [PBXplore](https://pbxplore.readthedocs.io/en/latest/)= 1.4
 
-To create logo from PB sequences (optionel):
+To create logo from PB sequences (optional):
 
 - [WebLogo 3](http://weblogo.threeplusone.com/)
 
